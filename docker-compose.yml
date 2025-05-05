@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  api-service:
+    build: ./api-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - worker-service
+
+  worker-service:
+    build: ./worker-service
